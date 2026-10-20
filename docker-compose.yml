@@ -1,0 +1,56 @@
+# Local full stack:  docker compose up --build
+#   Frontend  http://localhost:3000
+#   API       http://localhost:8080/api
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: overvu
+      POSTGRES_USER: overvu
+      POSTGRES_PASSWORD: overvu
+    ports:
+      - "5432:5432"
+    volumes:
+      - revu-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U overvu -d overvu"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Applies backend/migrations (the unchanged Flyway scripts), then exits.
+  flyway:
+    image: flyway/flyway:11
+    command: -url=jdbc:postgresql://postgres:5432/overvu -user=overvu -password=overvu -connectRetries=10 migrate
+    volumes:
+      - ./backend/migrations:/flyway/sql:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  backend:
+    build: ./backend
+    environment:
+      APP_ENV: prod
+      DATABASE_URL: postgres://overvu:overvu@postgres:5432/overvu?sslmode=disable
+      JWT_SECRET: ${JWT_SECRET:-local-docker-secret-key-change-in-production-min-32-chars}
+      CORS_ALLOWED_ORIGINS: http://localhost:3000,http://localhost:5173
+      APP_TIMEZONE: Europe/Berlin
+    ports:
+      - "8080:8080"
+    depends_on:
+      flyway:
+        condition: service_completed_successfully
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8080/api
+    ports:
+      - "3000:8080"
+    depends_on:
+      - backend
+
+volumes:
+  revu-data:

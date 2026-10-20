@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #FAFAF8;
+  --color-surface: #FFFFFF;
+  --color-ink: #1C1B1A;
+  --color-ink-muted: #6B6862;
+  --color-accent: #3A5A40;
+  --color-border: #E4E1DA;
+}
+
+.dark {
+  --color-background: #1A1A18;
+  --color-surface: #242422;
+  --color-ink: #F0EDE8;
+  --color-ink-muted: #9B9690;
+  --color-border: #38362F;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Shared form control look (was repeated inline on every input before). */
+@utility field {
+  border-width: 1px;
+  border-color: var(--color-border);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-accent);
+  }
+}
+
+@utility btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  &:disabled {
+    opacity: 0.5;
+  }
+}
