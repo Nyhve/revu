@@ -15,7 +15,7 @@ import (
 	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/Nyhve/revu/backend/internal/store"
+	"github.com/Im-Doh/revu/backend/internal/store"
 )
 
 func Connect(ctx context.Context, url string) (*pgxpool.Pool, error) {

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/Nyhve/revu/backend/internal/decimal"
+	"github.com/Im-Doh/revu/backend/internal/decimal"
 )
 
 // Validator collects field errors in declaration order and renders them as

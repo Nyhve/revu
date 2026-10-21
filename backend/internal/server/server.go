@@ -10,17 +10,17 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/Nyhve/revu/backend/internal/activity"
-	"github.com/Nyhve/revu/backend/internal/app"
-	"github.com/Nyhve/revu/backend/internal/auth"
-	"github.com/Nyhve/revu/backend/internal/finance"
-	"github.com/Nyhve/revu/backend/internal/fitness"
-	"github.com/Nyhve/revu/backend/internal/goal"
-	"github.com/Nyhve/revu/backend/internal/habit"
-	"github.com/Nyhve/revu/backend/internal/httpx"
-	"github.com/Nyhve/revu/backend/internal/learning"
-	"github.com/Nyhve/revu/backend/internal/task"
-	"github.com/Nyhve/revu/backend/internal/user"
+	"github.com/Im-Doh/revu/backend/internal/activity"
+	"github.com/Im-Doh/revu/backend/internal/app"
+	"github.com/Im-Doh/revu/backend/internal/auth"
+	"github.com/Im-Doh/revu/backend/internal/finance"
+	"github.com/Im-Doh/revu/backend/internal/fitness"
+	"github.com/Im-Doh/revu/backend/internal/goal"
+	"github.com/Im-Doh/revu/backend/internal/habit"
+	"github.com/Im-Doh/revu/backend/internal/httpx"
+	"github.com/Im-Doh/revu/backend/internal/learning"
+	"github.com/Im-Doh/revu/backend/internal/task"
+	"github.com/Im-Doh/revu/backend/internal/user"
 )
 
 type Options struct {

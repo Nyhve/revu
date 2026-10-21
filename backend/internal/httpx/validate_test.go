@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Nyhve/revu/backend/internal/decimal"
+	"github.com/Im-Doh/revu/backend/internal/decimal"
 )
 
 func ptr(s string) *string { return &s }

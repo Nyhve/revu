@@ -15,12 +15,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/Nyhve/revu/backend/internal/app"
-	"github.com/Nyhve/revu/backend/internal/apptime"
-	"github.com/Nyhve/revu/backend/internal/auth"
-	"github.com/Nyhve/revu/backend/internal/config"
-	"github.com/Nyhve/revu/backend/internal/database"
-	"github.com/Nyhve/revu/backend/internal/server"
+	"github.com/Im-Doh/revu/backend/internal/app"
+	"github.com/Im-Doh/revu/backend/internal/apptime"
+	"github.com/Im-Doh/revu/backend/internal/auth"
+	"github.com/Im-Doh/revu/backend/internal/config"
+	"github.com/Im-Doh/revu/backend/internal/database"
+	"github.com/Im-Doh/revu/backend/internal/server"
 )
 
 func main() {

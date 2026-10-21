@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Nyhve/revu/backend/internal/app"
-	"github.com/Nyhve/revu/backend/internal/apptime"
-	"github.com/Nyhve/revu/backend/internal/auth"
-	"github.com/Nyhve/revu/backend/internal/database"
-	"github.com/Nyhve/revu/backend/internal/server"
+	"github.com/Im-Doh/revu/backend/internal/app"
+	"github.com/Im-Doh/revu/backend/internal/apptime"
+	"github.com/Im-Doh/revu/backend/internal/auth"
+	"github.com/Im-Doh/revu/backend/internal/database"
+	"github.com/Im-Doh/revu/backend/internal/server"
 )
 
 // TestMain starts the Go API in-process when only TEST_DATABASE_URL is given

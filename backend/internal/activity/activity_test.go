@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Nyhve/revu/backend/internal/apptime"
+	"github.com/Im-Doh/revu/backend/internal/apptime"
 )
 
 func TestGroupByDayInUserTimeZone(t *testing.T) {

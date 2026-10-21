@@ -4,11 +4,11 @@ package learning
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/Nyhve/revu/backend/internal/activity"
-	"github.com/Nyhve/revu/backend/internal/app"
-	"github.com/Nyhve/revu/backend/internal/auth"
-	"github.com/Nyhve/revu/backend/internal/httpx"
-	"github.com/Nyhve/revu/backend/internal/store"
+	"github.com/Im-Doh/revu/backend/internal/activity"
+	"github.com/Im-Doh/revu/backend/internal/app"
+	"github.com/Im-Doh/revu/backend/internal/auth"
+	"github.com/Im-Doh/revu/backend/internal/httpx"
+	"github.com/Im-Doh/revu/backend/internal/store"
 )
 
 type CreateProjectRequest struct {

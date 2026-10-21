@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/Nyhve/revu/backend/internal/httpx"
+	"github.com/Im-Doh/revu/backend/internal/httpx"
 )
 
 const userIDKey = "auth.userID"

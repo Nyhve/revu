@@ -1,4 +1,4 @@
-module github.com/Nyhve/revu/backend
+module github.com/Im-Doh/revu/backend
 
 go 1.24
 
